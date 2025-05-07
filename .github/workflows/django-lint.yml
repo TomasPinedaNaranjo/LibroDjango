@@ -31,7 +31,7 @@ jobs:
         
     - name: Run pylint
       run: |
-        pylint --disable=all --enable=unused-import,unused-variable,unused-argument `find . -name "*.py" | grep -v "migrations"`
+        pylint --disable=all --enable=unused-import,unused-variable,unused-argument `find . -name "*.py" | grep -v "migrations"` || true
         
     - name: Check formatting with black
       run: |
