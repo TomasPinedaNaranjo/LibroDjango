@@ -28,4 +28,11 @@ jobs:
       - name: Run ruff (lint)
         run: ruff check .
 
+
+      - name: Commit and push changes if Ruff modified files
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+        commit_message: Python Linting (Ruff)
+        skip_fetch: true
+
  
